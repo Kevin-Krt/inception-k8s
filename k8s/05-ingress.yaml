@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wordpress
+spec:
+  tls:
+  - hosts:
+    - kkraft.42.fr
+    secretName: kkraft-tls
+  rules:
+  - host: kkraft.42.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wordpress
+            port:
+              number: 80

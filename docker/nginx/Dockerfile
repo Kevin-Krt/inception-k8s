@@ -9,6 +9,6 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 COPY conf/nginx.conf /etc/nginx/conf.d/inception.conf
 
-EXPOSE 443
+EXPOSE 80
 
 CMD [ "nginx", "-g", "daemon off;" ]
