@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata: 
   name: app-config
 data:
-  DOMAIN_NAME: kkraft.42.fr
+  DOMAIN_NAME: kkraft.42.fr:8443
   MYSQL_DATABASE: database_name
   MYSQL_USER: database_user
   WP_TITLE: Website_Title
