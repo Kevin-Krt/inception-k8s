@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: app-config
+data:
+  DOMAIN_NAME: kkraft.42.fr
+  MYSQL_DATABASE: database_name
+  MYSQL_USER: database_user
+  WP_TITLE: Website_Title
+  WP_ADMIN_USER: admin_username_without_ad_min_word
+  WP_USER: author_username
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secret 
+type: Opaque
+stringData: 
+  MYSQL_PASSWORD: database_password
+  MYSQL_ROOT_PASSWORD: database_root_password
+  WP_ADMIN_PASSWORD: strong_password
+  WP_ADMIN_EMAIL: email@domain.com
+  WP_USER_PASSWORD: author_password
+  WP_USER_EMAIL: author@domain.com
