@@ -30,7 +30,7 @@ spec:
         image: inception/nginx:v1
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 443
+        - containerPort: 80
         volumeMounts:
         - name: wordpress-data
           mountPath: /var/www/wordpress
